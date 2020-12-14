@@ -1,0 +1,18 @@
+# Definindo as entidades das tabelas: 
+
+    * points  -> Pontos de coleta
+      [colunas da tabela 'points': 'image' | 'name' | 'email' | 'whatsapp' | 'latitude' | 'longitude' | 'city' | 'uf']
+     
+    
+    * items   -> Quais são os itens para coleta
+      [colunas da tabela 'items': 'image' | 'title']
+
+    --------- 
+      //Relacionamento muitos para muitos (n-n) -> Quando eu cadastro um ponto de coleta eu vou selecionar vários itens.
+      //E também 1 ITEM pode ser também coletado por vários pontos de coletas
+      //POR ISSO, é criado uma tabela pivô, ou seja, uma tabela de relacionamento
+
+    * points_items -> Tabela de relacionamento dos itens que um ponto pode coletar
+      (colunas da tabela 'ponts_items': 'point_id' | 'items_id')
+      
+    ---------
